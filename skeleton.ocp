@@ -1,0 +1,18 @@
+dirname = "src"
+begin library "skeleton-lib"
+  files = [ "hello.mli" "hello.ml" ]
+  requires = [ "batteries" ]
+end
+
+begin program "skeleton"
+  sort = true
+  files = ["main.ml"]
+  requires = ["skeleton-lib" "batteries"]
+end
+
+begin program "hello_test"
+  sort = true
+  dirname = "tests"
+  files = ["test.ml"]
+  requires = ["skeleton-lib" "oUnit"]
+end
