@@ -12,7 +12,7 @@ doc:
 	ocamldoc -html src/*mli -d docs
 
 test:
-	ocamlbuild ${TEST_FLAGS} tests/ex30_test.native --
+	ocamlbuild ${TEST_FLAGS} tests/test.native --
 
 clean:
 	ocamlbuild -clean
